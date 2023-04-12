@@ -1,0 +1,135 @@
+$dropdownColor: whitesmoke;
+$signatureColor: white;
+
+//for \n {caption}
+div {
+  white-space: pre-wrap;
+  margin-top: 30px;
+}
+
+.slideContainer {
+  height: 700px;
+  width: 100vw;
+  overflow: scroll;
+  font-family: "Playfair Display";
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.slides {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.d-none {
+  display: block !important;
+}
+
+.carousel-caption {
+  width: 100%;
+  height: 100%;
+  margin-right: 0px;
+  z-index: 5;
+}
+
+.captionAnimation {
+  animation: 0.3s slide-right 0.3s forwards;
+  transform: translateX(-100%);
+  h3 {
+    text-align: left;
+    font-size: 25px;
+    line-height: 40px;
+    margin-top: 450px;
+    bottom: 0px;
+    margin-left: 20%;
+    float: left;
+  }
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.carousel-indicators {
+  li {
+    transition: none;
+  }
+  .active {
+    background-color: $signatureColor;
+  }
+}
+
+.carousel-control-next {
+  height: 25px;
+  right: 40px;
+  top: 48%;
+  width: auto;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  height: 25px;
+  left: 40px;
+  top: 48%;
+  width: auto;
+  z-index: 10;
+}
+
+.carousel-control-prev-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+}
+
+//carousel slides container
+.carousel-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+//MEDIA SCREEN SECTION
+//////////////////////////////////////////////////////////////////////
+@media screen and (max-width: 800px) {
+  .slideContainer {
+    height: 100%;
+    width: 100%;
+  }
+
+  .captionAnimation {
+    h3 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .carousel-control-prev {
+    left: 10px;
+    top: 40%;
+    width: 20px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+    top: 40%;
+    width: 20px;
+  }
+
+  .captionAnimation {
+    h3 {
+      font-size: 15px;
+      line-height: 15px;
+      margin-top: 35%;
+      margin-left: 20%;
+      margin-right: 10%;
+    }
+  }
+}

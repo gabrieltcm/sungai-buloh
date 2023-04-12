@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.scss";
+import "@fontsource/playfair-display";
+
+//Screens
+import Home from "./pages/Home/Home";
+import Footer from "./pages/Footer/Footer";
+
+export class App extends React.Component {
+  componentDidMount() {
+    window.scrollTo(1, 1);
+  }
+  render() {
+    return (
+      <>
+        <Home />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default App;
